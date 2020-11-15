@@ -52,6 +52,11 @@ int main()
 
         WaitForSingleObject(hThread, INFINITE);
 
+        if (hThread)
+        {
+            CloseHandle(hProc);
+        }
+
         CloseHandle(hThread);
     }
 
@@ -62,3 +67,4 @@ int main()
 
     return 0;
 }
+
